@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_manual_book_print_wizard_form" model="ir.ui.view">
+        <field name="name">manual.book.print.wizard.form</field>
+        <field name="model">manual.book.print.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Cetak Rekapitulasi">
+                <group>
+                    <group string="Filter">
+                        <field name="state_filter" widget="radio"/>
+                        <field name="category_filter"/>
+                    </group>
+                    <group string="Periode">
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                        <field name="print_date"/>
+                    </group>
+                </group>
+                <group>
+                    <field name="notes" placeholder="Tambahkan catatan untuk rekap ini..."/>
+                </group>
+                <footer>
+                    <button name="action_confirm_print" string="Generate PDF" type="object" class="btn-primary"/>
+                    <button name="action_print_excel" string="Download Excel" type="object" class="btn-success"/>
+                    <button string="Batal" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_manual_book_print_wizard" model="ir.actions.act_window">
+        <field name="name">Download Summary Report</field>
+        <field name="res_model">manual.book.print.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="manual_book_gab.model_manual_book_gab"/>
+        <field name="binding_type">action</field>
+    </record>
+</odoo>
