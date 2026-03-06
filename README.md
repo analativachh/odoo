@@ -21,7 +21,7 @@ Proyek ini adalah wadah belajar saya untuk mendalami pengembangan modul **Odoo (
 
  
 ## Struktur Modul
-    ```text
+    
     manual_book_gab/
     ├── data/
     │   └── ir_sequence_data.xml         # Konfigurasi penomoran otomatis
@@ -57,4 +57,5 @@ Proyek ini adalah wadah belajar saya untuk mendalami pengembangan modul **Odoo (
 
 5. 
 Created with ❤️ by Ana Lativach
+
 _Student @ Universitas Nahdlatul Ulama Yogyakarta_
