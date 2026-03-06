@@ -9,9 +9,10 @@
         SOP, dan panduan teknis bagi user GAB.
     """,
     'author': 'Ana Lativach',
-    'depends': ['base', 'web'], # base adalah dasar, web untuk fitur UI
+    'depends': ['base', 'mail'], # base adalah dasar, web untuk fitur UI
     'data': [
         'security/ir.model.access.csv',
+        'data/ir_sequence_data.xml',
         'views/manual_book_views.xml',
     ],
     'installable': True,
